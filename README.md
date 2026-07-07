@@ -1,6 +1,6 @@
 # Storage
 
-[![Build-Deploy](https://github.com/datafac/storage/actions/workflows/dotnet.yml/badge.svg)](https://github.com/datafac/storage/actions/workflows/dotnet.yml)
+[![Build-Deploy](https://github.com/datafac/storage-v3/actions/workflows/dotnet.yml/badge.svg)](https://github.com/datafac/storage-v3/actions/workflows/dotnet.yml)
 ![NuGet Version](https://img.shields.io/nuget/v/DataFac.Storage)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/DataFac.Storage)
 ![GitHub License](https://img.shields.io/github/license/Datafac/storage)
@@ -8,7 +8,7 @@
 
 Named blob storage abstractions and implementations.
 
-*Note: V3.0 has many breaking changes over V2.x.*
+*Note: This is the maintenance repo for V3.x.*
 
 ## Implementations
 

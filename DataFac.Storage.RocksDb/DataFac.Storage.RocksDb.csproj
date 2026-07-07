@@ -7,8 +7,8 @@
 		<WarningsAsErrors>nullable</WarningsAsErrors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageProjectUrl>https://github.com/datafac/storage</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/datafac/storage</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/datafac/storage-v3</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/datafac/storage-v3</RepositoryUrl>
 		<Company>DataFac</Company>
 		<Product>DTOMaker</Product>
 		<Authors>DataFac Contributors</Authors>
