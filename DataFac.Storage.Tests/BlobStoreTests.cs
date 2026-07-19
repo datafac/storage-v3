@@ -1,11 +1,13 @@
 ﻿using DataFac.Compression;
 using DataFac.Hashing;
+using PublicApiGenerator;
 using Shouldly;
 using System;
 using System.Buffers;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VerifyXunit;
 using Xunit;
 
 #pragma warning disable CA1707 // Identifiers should not contain underscores

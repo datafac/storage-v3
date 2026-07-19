@@ -1,0 +1,54 @@
+﻿namespace DataFac.Storage
+{
+    public readonly struct BlobData : System.IEquatable<DataFac.Storage.BlobData>
+    {
+        public readonly System.ReadOnlyMemory<byte> Bytes;
+        public readonly bool HasValue;
+        public bool Equals(DataFac.Storage.BlobData other) { }
+        public override bool Equals(object? obj) { }
+        public override int GetHashCode() { }
+        public static DataFac.Storage.BlobData From(System.ReadOnlyMemory<byte> bytes) { }
+        public static DataFac.Storage.BlobData NotFound() { }
+        public static bool operator !=(DataFac.Storage.BlobData left, DataFac.Storage.BlobData right) { }
+        public static bool operator ==(DataFac.Storage.BlobData left, DataFac.Storage.BlobData right) { }
+    }
+    public readonly struct BlobKey : System.IEquatable<DataFac.Storage.BlobKey>
+    {
+        public readonly System.ReadOnlyMemory<byte> Bytes;
+        public readonly bool HasValue;
+        public bool Equals(DataFac.Storage.BlobKey other) { }
+        public override bool Equals(object? obj) { }
+        public override int GetHashCode() { }
+        public static DataFac.Storage.BlobKey From(System.ReadOnlyMemory<byte> bytes) { }
+        public static DataFac.Storage.BlobKey NotFound() { }
+        public static bool operator !=(DataFac.Storage.BlobKey left, DataFac.Storage.BlobKey right) { }
+        public static bool operator ==(DataFac.Storage.BlobKey left, DataFac.Storage.BlobKey right) { }
+    }
+    public struct Counters
+    {
+        public long BlobGetCache;
+        public long BlobGetCount;
+        public long BlobGetReads;
+        public long BlobPutCount;
+        public long BlobPutSkips;
+        public long BlobPutWrits;
+        public long ByteDelta;
+        public long NameDelta;
+    }
+    public interface IDataStore : System.IDisposable
+    {
+        int ClearCache();
+        System.Threading.Tasks.ValueTask<DataFac.Storage.BlobData> GetBlob(DataFac.Storage.BlobKey key);
+        System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<DataFac.Storage.BlobKey, DataFac.Storage.BlobData>> GetCachedBlobs();
+        DataFac.Storage.Counters GetCounters();
+        DataFac.Storage.BlobKey GetName(string name);
+        System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, DataFac.Storage.BlobKey>> GetNames();
+        System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<DataFac.Storage.BlobKey, DataFac.Storage.BlobData>> GetStoredBlobs();
+        System.Threading.Tasks.ValueTask PutBlob(DataFac.Storage.BlobKey key, DataFac.Storage.BlobData data, bool withSync = false);
+        bool PutName(string name, in DataFac.Storage.BlobKey key);
+        System.Threading.Tasks.ValueTask<DataFac.Storage.BlobData> RemoveBlob(DataFac.Storage.BlobKey key, bool withSync);
+        void RemoveName(string name);
+        void ResetCounters();
+        System.Threading.Tasks.ValueTask Sync();
+    }
+}
