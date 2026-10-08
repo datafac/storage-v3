@@ -20,8 +20,8 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="DataFac.Compression" Version="1.1.21" />
-		<PackageReference Include="DataFac.Hashing" Version="1.1.21" />
+		<PackageReference Include="DataFac.Compression" Version="1.1.22" />
+		<PackageReference Include="DataFac.Hashing" Version="1.1.22" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
 		<PackageReference Include="PublicApiGenerator" Version="11.5.4" />
 		<PackageReference Include="RocksDB" Version="11.8.1.5032" />
