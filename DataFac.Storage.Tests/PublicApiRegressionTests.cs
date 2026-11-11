@@ -22,7 +22,7 @@ public class PublicApiRegressionTests
     {
         var assemblyVersion = typeof(BlobData).Assembly.GetName().Version;
         assemblyVersion.ShouldNotBeNull();
-        assemblyVersion.ToString().ShouldBe("3.1.0.0");
+        assemblyVersion.ToString().ShouldBe("3.2.0.0");
     }
 
     [Fact]
